@@ -13,5 +13,10 @@
             "email": "anis@safine.me"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Ices2Admin\\": "src"
+        }
+    }
 }
