@@ -6,5 +6,7 @@ $app
         return $app['twig']->render('config.twig', array(
             'installed' => $app['ices']->isInstalled() ? 'true' : 'false',
             'folder' => isset($config['ices2_folder']) ? $config['ices2_folder'] : 'missing',
+            'folder_exists' => isset($config['ices2_folder']) ? (is_dir($config['ices2_folder']) ? 'true' : 'false') : 'false',
+            'folder_writeable' => isset($config['ices2_folder']) ? (is_writeable($config['ices2_folder']) ? 'true' : 'false') : 'false',
         ));
     });
