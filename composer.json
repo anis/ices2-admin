@@ -1,0 +1,16 @@
+{
+    "name": "anis/ices2-admin",
+    "description": "A PHP administration for ices2",
+    "type": "project",
+    "require": {
+        "silex/silex": "^2.0"
+    },
+    "license": "MPL2.0",
+    "authors": [
+        {
+            "name": "Anis Safine",
+            "email": "anis@safine.me"
+        }
+    ],
+    "minimum-stability": "stable"
+}
