@@ -82,6 +82,14 @@
                 <table>
                     <tbody>
                         <tr>
+                            <th>Ezstream is installed...</th>
+                            {% if ezstream %}
+                            <td class="label label--green">Yes</span>
+                            {% else %}
+                            <td class="label label--red">No</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
                             <th>Ices2 is installed...</th>
                             {% if ices2 %}
                             <td class="label label--green">Yes</span>
