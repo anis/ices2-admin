@@ -73,6 +73,12 @@
                     <h1 class="header-title">Configuration panel</h1>
                 </header>
 
+                {% if ices2 and folder_writeable %}
+                <p>Congratulations, <span class="label label--green">you are ready</span> to use Ices2 admin!</p>
+                {% else %}
+                <p>Oh oh... <span class="label label--red">Your installation is not complete</span>, please fix any issue raised below before using Ices2 admin:</p>
+                {% endif %}
+
                 <table>
                     <tbody>
                         <tr>
