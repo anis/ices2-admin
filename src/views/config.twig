@@ -2,12 +2,114 @@
 <html lang="en">
     <head>
         <title>Ices2 administration</title>
+
+        <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: 'Trebuchet MS';
+        }
+
+        .section {
+            display: inline-block;
+            margin-top: 30px;
+            padding-bottom: 30px;
+            width: 800px;
+        }
+
+        .section--status {
+            color: white;
+            background: #3498db;
+        }
+
+        .section-line {
+            margin: 0;
+            padding: 0;
+            line-height: 30px;
+        }
+
+        .section table {
+            margin: 0 auto;
+        }
+
+        .section th {
+            text-align: left;
+        }
+
+        .header {
+            padding: 0 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .header-title {
+            margin: 0;
+            padding: 20px 0;
+            border-bottom: 1px solid white;
+        }
+
+        .label {
+            padding: 0 5px;
+            text-align: center;
+        }
+
+        .label--green {
+            background: #27ae60;
+        }
+
+        .label--red {
+            background: #e74c3c;
+        }
+        </style>
     </head>
 
     <body>
-        <p>Ices2 installed: {{ installed }}</p>
-        <p>Ices2 folder: {{ folder }}</p>
-        <p>Ices2 folder exists: {{ folder_exists }}</p>
-        <p>Ices2 folder is writeable: {{ folder_writeable }}</p>
+        <div>
+            <section class="section section--status">
+                <header class="header">
+                    <h1 class="header-title">Configuration panel</h1>
+                </header>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Ices2 is installed...</th>
+                            {% if ices2 %}
+                            <td class="label label--green">Yes</span>
+                            {% else %}
+                            <td class="label label--red">No</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <th>Ices2-admin folder path...</th>
+                            {% if folder %}
+                            <td class="label">{{folder}}</span>
+                            {% else %}
+                            <td class="label label--red">not configured</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <th>Ices2-admin folder exists...</th>
+                            {% if folder_exists %}
+                            <td class="label label--green">Yes</span>
+                            {% else %}
+                            <td class="label label--red">No</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <th>Ices2-admin folder is writeable...</th>
+                            {% if folder_writeable %}
+                            <td class="label label--green">Yes</span>
+                            {% else %}
+                            <td class="label label--red">No</td>
+                            {% endif %}
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </body>
 </html>
