@@ -3,7 +3,8 @@
     "description": "A PHP administration for ices2",
     "type": "project",
     "require": {
-        "silex/silex": "^2.0"
+        "silex/silex": "^2.0",
+        "twig/twig": "^1.24"
     },
     "license": "MPL2.0",
     "authors": [
